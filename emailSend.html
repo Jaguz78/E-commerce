@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email enviado</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --white: #fff;
+            --black: #000;
+            --very-light-pink: #c7c7c7;
+            --text-input-field: #f7f7f7;
+            --hospital-green: #acd9b2;
+            --sm: 1.4rem;
+            --md: 1.6rem;
+            --lg: 1.8rem;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 62.5%;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .login{
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        .form-container{
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            width: 300px;
+            justify-items: center;
+        }
+        .logo{
+            width: 150px;
+            margin-bottom: 48px;
+            justify-self: center;
+            display: none;
+        }
+        .title{
+            font-size: var(--lg);
+            margin-bottom: 12px;
+            text-align: center;
+        }
+        .subtitle{
+            color: var(--black);
+            font-size: var(--md);
+            font-weight: 300;
+            margin-top: 0;
+            margin-bottom: 44px;
+            text-align: center;
+        }
+        .primary-button{
+            width: 100%;
+            height: 56px;
+            background-color: var(--hospital-green);
+            border: none;
+            border-radius: 8px;
+            color: var(--white);
+            font-weight: 700;
+            font-size: var(--lg);
+            font-family: 'Quicksand', sans-serif;
+            cursor: pointer;
+        }
+        @media (max-width: 640px) {
+            .logo{
+                display: block;
+            }
+        }
+        figure{
+            width: 150px;
+            height: 150px;
+            display: grid;
+            place-items: center;
+            margin-bottom: 32px;
+            background-color: var(--text-input-field);
+            border-radius: 100px;
+            margin-bottom: 44px;
+        }
+        .icon{
+            width: 100px;
+        }
+        .resend{
+            font-size: var(--sm);
+            margin-top: 8px;
+        }
+        .resend a{
+            text-decoration: none;
+            color: var(--hospital-green);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <div class="form-container">
+            <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo">
+            <h1 class="title">El correo ha sido enviado!</h1>
+            <p class="subtitle">Por favor revisa tu correo para obtener instrucciones de como cambiar la contraseña</p>
+
+            <figure>
+                <img src="./icons/email.svg" alt="email" class="icon">
+            </figure>
+
+            <button class="primary-button">Iniciar sesión</button>
+            <p class="resend">
+                <span>No recibiste el correo?</span><a href=""> Reenviar</a>
+            </p>
+            
+        </div>
+    </div>
+</body>
+</html>
