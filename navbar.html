@@ -28,6 +28,96 @@
             font-size: 62.5%;
             font-family: 'Quicksand', sans-serif;
         }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 36px;
+            border-bottom: solid 1px var(--very-light-pink);
+        }
+        .menu{
+            width: 28px;
+            height: 28px;
+            display: none;
+        }
+        .logo{
+            width: 140px;
+            cursor: pointer;
+        }
+        .navbar-right ul, .navbar-left ul{
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+        .navbar-left{
+            display: flex;
+        }
+        .navbar-left ul{
+            margin-left: 32px;
+        }
+        .navbar-left ul li{
+            margin: 0 8px;
+        }
+        .navbar-left ul li a{
+            text-decoration: none;
+            color: var(--very-light-pink);
+            font-size: var(--md);
+            padding: 8px;
+        }
+        .navbar-left ul li a:hover{
+            color: var(--hospital-green);
+            border-radius: 8px;
+            border: solid 1px var(--hospital-green);
+        }
+        .navbar-right ul li:first-child{
+            font-size: var(--md);
+            margin-right: 32px;
+            font-weight: 300;
+            cursor: pointer;
+        }
+        .navbar-right ul li:first-child img{
+            transform: rotate(90deg);
+            padding-left: 4px;
+        }
+        .shopping-cart{
+            position: relative;
+        }
+        .shopping-cart span{
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            top: -6px;
+            right: -3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--hospital-green);
+            font-size: var(--sm);
+            border-radius: 10px;
+            font-weight: 700;
+        }
+        @media (max-width: 640px){
+            .menu{
+                display: block;
+            }
+            .navbar-left ul{
+                display: none;
+            }
+            .navbar-right li:first-child{
+                display: none;
+            }
+            nav{
+                padding: 12px;
+            }
+        }
+        @media (max-width: 1000px){
+            .navbar-left ul li{
+                margin: 0;
+            }
+            .navbar-left ul li a{
+                padding: 4px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -60,9 +150,10 @@
 
         <div class="navbar-right">
              <ul>
-                 <li>correo@gmail.com</li>
+                 <li>correo@gmail.com <span><img src="./icons/flechita.svg" alt=""></span></li>
                  <li class="shopping-cart">
-                     <img src="./icons/icon_shopping_cart.svg" alt="">
+                     <img src="./icons/icon_shopping_cart.svg" alt="shopping-cart">
+                     <span>8</span>
                  </li>
              </ul>
         </div>
